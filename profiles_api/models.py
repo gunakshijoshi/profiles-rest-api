@@ -18,8 +18,8 @@ class UserProfileManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, name=name)
 
-        user.set_password[password] #hashed password
-        user.save(using=self.db)    #to support multiple database in future (using=self.db)
+        user.set_password(password) #hashed password
+        user.save(using=self._db)    #to support multiple database in future (using=self.db)
 
         return user
 
