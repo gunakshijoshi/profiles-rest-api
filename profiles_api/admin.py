@@ -5,3 +5,4 @@ from profiles_api import models
 
 """Register models which we have created"""
 admin.site.register(models.UserProfile)
+admin.site.register(models.ProfileFeedItem)
